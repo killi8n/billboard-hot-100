@@ -1,5 +1,5 @@
 {
-  "name": "billboard-hot-100-api",
+  "name": "billboard-chart-api",
   "version": "1.0.0",
   "main": "dist/index.js",
   "types": "dist/types/index.d.ts",

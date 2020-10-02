@@ -15,5 +15,20 @@
   "devDependencies": {
     "@types/cheerio": "^0.22.22",
     "@types/request": "^2.48.5"
-  }
+  },
+  "description": "billboard chart crawling module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/killi8n/billboard-hot-100.git"
+  },
+  "keywords": [
+    "billboard",
+    "crawling",
+    "crawl"
+  ],
+  "author": "killi8n",
+  "bugs": {
+    "url": "https://github.com/killi8n/billboard-hot-100/issues"
+  },
+  "homepage": "https://github.com/killi8n/billboard-hot-100#readme"
 }

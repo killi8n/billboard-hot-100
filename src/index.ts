@@ -1,11 +1,20 @@
 import cheerio from 'cheerio'
+import { format } from 'date-fns'
 import { billboardChartStaticURL, billboardHot100URL } from './lib/constants'
 import crawl from './lib/crawl'
 import { BillBoardHot100Item } from './types'
 
-export const getBillBoardHot100 = async (): Promise<BillBoardHot100Item[] | null> => {
+export const getBillBoardHot100 = async ({ date }: { date?: Date | number }): Promise<BillBoardHot100Item[] | null> => {
     try {
-        const { response, body } = await crawl(billboardHot100URL)
+        let formattedDate = ""
+        if (date) {
+            formattedDate = format(date, 'yyyy-MM-dd')
+        }
+        let url = billboardHot100URL
+        if (formattedDate) {
+            url = `${billboardHot100URL}/${formattedDate}`
+        }
+        const { response, body } = await crawl(url)
         if (response.statusCode !== 200) {
             return null
         }

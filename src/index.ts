@@ -4,6 +4,8 @@ import { billboardChartStaticURL, billboardHot100URL } from './lib/constants'
 import crawl from './lib/crawl'
 import { BillBoardHot100Item } from './types'
 
+export * from './types'
+
 export const getBillBoardHot100 = async ({ date }: { date?: Date | number }): Promise<BillBoardHot100Item[] | null> => {
     try {
         let formattedDate = ""
